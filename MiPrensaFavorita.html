@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Examen HTMl-CSS</title>
+    <style>
+        #formulario::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        table {
+            border: 10px solid coral;
+            margin: auto;
+        }
+
+        th,
+        td {
+            background-color: beige;
+            padding: 10px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        select,
+        label {
+            font-size: x-large;
+        }
+
+        .opcion {
+            font-size: xx-large;
+            background-color: bisque;
+        }
+
+        #principal {
+            width: 70%;
+            background-color: gray;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #formulario {
+            padding: 10px;
+            background-color: bisque;
+        }
+
+        .btn {
+            font-size: large;
+            background-color: tan;
+            margin: auto 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="principal">
+        <table>
+            <tr>
+                <th colspan="2">
+                    Elige cuál de estos periódicos<br> conoces y te resulta más familiar
+                </th>
+                <th>
+                    Opciones
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="4">
+                    Prensa<br>Canaria
+                </th>
+                <td>
+                    <a href="https://www.eldia.es/"><img src="imagenes/ElDia.png" alt="Logo ElDia"></a>
+                </td>
+                <td class="opcion">1</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.eldiario.es/canariasahora/"><img src="imagenes/CanariasAhora.png"
+                            alt="Logo CanariasAhora"></a>
+                </td>
+                <td class="opcion">2</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://diariodeavisos.elespanol.com/"><img src="imagenes/DiarioDeAvisos.png"
+                            alt="Logo DiarioDeAvisos"></a>
+                </td>
+                <td class="opcion">3</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.canarias7.es/"><img src="imagenes/Canarias7.png" alt="Logo Canarias7"></a>
+                </td>
+                <td class="opcion">4</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div id="formulario">
+                        <form action="https://php-apw.azurewebsites.net" method="post">
+                            <label for="opcion">Conozco/Prefiero:</label>
+                            <select name="opcion" id="opcion">
+                                <option value="" disabled selected>Elige una opcion</option>
+                                <option value="1">El Día</option>
+                                <option value="2">Canarias Ahora</option>
+                                <option value="3">Diario de Avisos</option>
+                                <option value="4">Canarias7</option>
+                            </select>
+                            <hr>
+                            <div class="botones">
+                                <button type="submit" class="btn">Transmitir</button>
+                                <button type="reset" class="btn">Reiniciar</button>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
